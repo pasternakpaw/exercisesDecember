@@ -1,6 +1,6 @@
 package watki.Sprzedawca;
 
-public class Konsument {
+public class Konsument implements Runnable {
     private Channel channel;
 
     public Konsument(Channel channel){
@@ -9,5 +9,10 @@ public class Konsument {
 
     void buy() {
         Produkt produkt = channel.get();
+    }
+
+    @Override
+    public void run() {
+        buy();
     }
 }

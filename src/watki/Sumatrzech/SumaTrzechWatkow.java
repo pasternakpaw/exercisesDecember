@@ -2,6 +2,10 @@ package watki.Sumatrzech;
 
 import java.util.Iterator;
 import java.util.Random;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 public class SumaTrzechWatkow {
     int liczba1 = 0;
@@ -11,6 +15,16 @@ public class SumaTrzechWatkow {
     public static void main(String[] args) throws InterruptedException {
 
         SumaTrzechWatkow sumaTrzechWatkow = new SumaTrzechWatkow();
+
+       /* ExecutorService executorService = Executors.newFixedThreadPool(3);
+
+        Future<String> wynikCallable = executorService.submit(new Callable<String>() {
+            @Override
+            public String call() throws Exception {
+                Thread.sleep(1000);
+                return "zwracam wynik z call";
+            }
+        });*/
 
         /*Thread two = new Thread(MojeRunnable(){
            @Override
